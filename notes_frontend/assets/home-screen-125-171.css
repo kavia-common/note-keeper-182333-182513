@@ -1,0 +1,25 @@
+#home-screen-125-171 {
+  /* Already positioned using inline absolute positions for pixel-precision */
+}
+
+/* Maintain base size but allow responsive scale within viewport width */
+@media (max-width: 414px) {
+  #home-screen-125-171 {
+    transform-origin: top left;
+    width: 414px;
+  }
+  /* scale to viewport width */
+  body, html { overflow-x: hidden; }
+  #home-screen-125-171 {
+    transform: scale(calc(100vw / 414));
+    height: calc(1100px * (100vw / 414));
+  }
+}
+
+@media (min-width: 415px) {
+  /* center on larger viewports without scaling */
+  #home-screen-125-171 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
